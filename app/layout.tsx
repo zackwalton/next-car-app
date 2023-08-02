@@ -1,9 +1,12 @@
+"use client"
+
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { list } from 'postcss';
 import React from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,13 +23,16 @@ export default function RootLayout({
   return (
       <main>
         <body className={inter.className}>
-          {/* PUT THE NAVBAR COMPONENT HERE*/}
-          <Navbar />
-          {children}
-          {/* PUT THE FOOTER COMPONENT HERE*/}
-          <footer>
-            <p>Temp Footer</p>
-          </footer>
+              <Navbar />
+              <div className='flex flex-col space-y-10 relative top-24'>
+                <div>
+                  {children}
+                <p>hello</p>
+                </div>
+                <div className=''>
+                  <Footer />
+                </div>
+            </div>
         </body>
     </main>
   )

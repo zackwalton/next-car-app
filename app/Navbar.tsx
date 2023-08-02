@@ -1,17 +1,17 @@
-'use client'
-
 import React from 'react';
 import Image from "next/image";
 import Logo from '../public/Logo.png';
 import Link from 'next/link';
 import {AiOutlineMenu} from 'react-icons/ai';
 import { useState } from 'react';
+
 const Navbar = () => {
 
-    var [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleNav = () => {
         setMenuOpen(!menuOpen);
+        menuOpen ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500" : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
     }
 
 
@@ -46,15 +46,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div onClick={handleNav} className="md:hidden cursor-pointer pl-24 bg-black text-white hover:border-w">
-                <AiOutlineMenu size={25} />
+                <AiOutlineMenu size={30} />
             </div>
         </div>
         <div className={
-            menuOpen
-            ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-            : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+            menuOpen ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500" : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
         }>
-
         </div>
     </nav>
   )
