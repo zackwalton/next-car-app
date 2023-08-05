@@ -1,6 +1,6 @@
 import '@/app/globals.css'
 import type {Metadata} from 'next'
-import {Inter, Roboto, Spectral} from 'next/font/google'
+import {Inter} from 'next/font/google'
 import React from 'react';
 import Navbar from '@/app/Navbar';
 
@@ -20,8 +20,8 @@ export default function RootLayout(
   return (
       <section>
         <div className={inter.className}>
-        <Navbar/>
-        {children}
+          <Navbar/>
+          {children}
         </div>
       </section>
   )

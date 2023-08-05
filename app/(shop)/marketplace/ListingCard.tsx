@@ -1,7 +1,6 @@
 'use client'
 
-import Image, {ImageProps, StaticImageData} from "next/image";
-import {NumericFormat} from 'react-number-format'
+import Image, {StaticImageData} from "next/image";
 
 interface Props {
   car: {
