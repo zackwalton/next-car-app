@@ -4,7 +4,7 @@ import {Inter} from 'next/font/google'
 import React from 'react';
 import Navbar from '@/app/Navbar';
 
-const inter = Inter({subsets: ["latin"]})
+// const inter = Inter({subsets: ["latin"]})
 
 export const metadata: Metadata = {
   title: 'Shop',
@@ -19,8 +19,8 @@ export default function RootLayout(
     }) {
   return (
       <section>
-        <div className={inter.className}>
-          <Navbar/>
+        <div className={""}>
+          {/*<Navbar/>*/}
           {children}
         </div>
       </section>
