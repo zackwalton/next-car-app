@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import Image from "next/image";
 import Logo from '../public/Logo.png';
@@ -17,7 +19,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="fixed w-full h-24 shadow-xl bg-black">
+    <nav className="w-full h-24 shadow-xl bg-black">
         <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
             <Link href='/'>
                 <Image
@@ -34,13 +36,13 @@ const Navbar = () => {
                     <Link href="/">
                         <li className='ml-10 uppercase hover:border-b text-xl text-white'>Home</li>
                     </Link>
-                    <Link href="/Market">
+                    <Link href="marketplace">
                         <li className='ml-10 uppercase hover:border-b text-xl text-white'>Market</li>
                     </Link>
-                    <Link href="/Contact Us">
+                    <Link href="contact-us">
                         <li className='ml-10 uppercase hover:border-b text-xl text-white'>Contact Us</li>
                     </Link>
-                    <Link href="/Services">
+                    <Link href="services">
                         <li className='ml-10 uppercase hover:border-b text-xl text-white'>Services</li>
                     </Link>
                 </ul>

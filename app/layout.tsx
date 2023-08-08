@@ -1,9 +1,6 @@
-"use client"
-
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { list } from 'postcss';
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -21,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-      <main>
+      <html>
         <body className={inter.className}>
               <Navbar />
               <div className='flex flex-col space-y-10 relative top-24'>
@@ -34,7 +31,7 @@ export default function RootLayout({
                 </div>
             </div>
         </body>
-    </main>
+      </html>
   )
 }
 
