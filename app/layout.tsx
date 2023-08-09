@@ -4,8 +4,9 @@ import { Inter } from 'next/font/google'
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = localFont({src: '../public/fonts/nfs.ttf'})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,16 +21,9 @@ export default function RootLayout({
   return (
       <html>
         <body className={inter.className}>
-              <Navbar />
-              <div className='flex flex-col space-y-10 relative top-24'>
-                <div>
-                  {children}
-                <p>hello</p>
-                </div>
-                <div className=''>
-                  <Footer />
-                </div>
-            </div>
+        <Navbar />
+          {children}
+        <Footer />
         </body>
       </html>
   )
