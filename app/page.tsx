@@ -8,10 +8,28 @@ export default function Home() {
   return (
     <main>
       <div className="bg-[url('/bg.jpg')]">
-      <div className="flex h-screen w-full justify-center items-center ">
-        <img className="w-1/2 h-auto"src="/logod-1.png" />
+      <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"}>
+        <h1 className="text-3xl text-green-500">
+          Deals of the day
+        </h1>
       </div>
-      <div className="flex overflow-x-auto px-20 py-20">
+      
+      <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"}  >
+        <a href={"#"}>
+          <Image className={"border border-gray-300 rounded-lg"} src={"/data/911.png"} alt={"None"} height={500} width={500}/>
+        </a>
+      </div>
+      <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"} >
+        <a href={"#"}>
+          <Image className={"border border-gray-300 rounded-lg"} src={"/data/skyline.png"} alt={"None"} height={500} width={500}/>
+        </a>
+      </div>
+      <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"} >
+        <a href={"#"}>
+          <Image className={"border border-gray-300 rounded-lg"} src={"/data/gallardo.png"} alt={"None"} height={500} width={500}/>
+        </a>
+      </div>
+      {/* <div className="flex overflow-x-auto px-10 py-10">
         <div className="flex-none">
           <img className="h-48 w-96 object-cover" src="/car-temp1.png" />
         </div>
@@ -27,8 +45,8 @@ export default function Home() {
         <div className="flex-none">
           <img className="h-48 w-96 object-cover" src="/car-temp2.png" />
         </div>
-        </div>
-      </div>
+        </div>*/}
+      </div> 
 
       
     </main>
