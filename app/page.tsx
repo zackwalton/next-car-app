@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <div className="bg-[url('/bg.jpg')]">
       <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"}>
-        <h1 className="text-3xl text-green-500">
+        <h1 className="text-3xl text-green-500 ">
           Deals of the day
         </h1>
       </div>
