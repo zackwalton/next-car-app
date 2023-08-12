@@ -1,9 +1,33 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import './globals.css'
+import { Inventory } from '@mui/icons-material'
+import CarCard from './CarCard'
 
+const cars = [
+  {
+    name: "Porche 911 turbo" ,
+    price: 30000,
+    inventory: 1,
+    image: "/data/911.png"
+  },
+  {
+    name: "Laborghini Gallardo" ,
+    price: 110000,
+    inventory: 1,
+    image: "/data/gallardo.png"
+  },
+  {
+    name: "Nissan Skyline" ,
+    price: 150000,
+    inventory: 1,
+    image: "/data/Skyline.png"
+  }
+]
 
 export default function Home() {
+
+  
 
   return (
     <main>
@@ -15,19 +39,11 @@ export default function Home() {
       </div>
       
       <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"}  >
-        <a href={"#"}>
-          <Image className={"border border-gray-300 rounded-lg"} src={"/data/911.png"} alt={"None"} height={500} width={500}/>
-        </a>
+          {cars.map((car, index) => {
+                return <CarCard car={car} key={car.name}/>
+          })}
       </div>
-      <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"} >
-        <a href={"#"}>
-          <Image className={"border border-gray-300 rounded-lg"} src={"/data/skyline.png"} alt={"None"} height={500} width={500}/>
-        </a>
-      </div>
-      <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"} >
-        <a href={"#"}>
-          <Image className={"border border-gray-300 rounded-lg"} src={"/data/gallardo.png"} alt={"None"} height={500} width={500}/>
-        </a>
+      
       </div>
       {/* <div className="flex overflow-x-auto px-10 py-10">
         <div className="flex-none">
@@ -46,7 +62,7 @@ export default function Home() {
           <img className="h-48 w-96 object-cover" src="/car-temp2.png" />
         </div>
         </div>*/}
-      </div> 
+      
 
       
     </main>
