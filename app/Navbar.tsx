@@ -53,18 +53,18 @@ const Navbar = () => {
         </div>
         <div className={menuOpen ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-black p-10 ease-in duration-500" : "fixed left-[-100%] top-0 p-10 ease-in duration-500 "}>
             <ul>
-            <Link href="/" onClick={handleNav}>
-                <li className=' uppercase hover:border-b text-xl text-white'>Home</li>
-            </Link>
-            <Link href="marketplace" onClick={handleNav}>
-                 <li className=' uppercase hover:border-b text-xl text-white'>Market</li>
-            </Link>
-            <Link href="contact-us" onClick={handleNav}>
-                <li className=' uppercase hover:border-b text-xl text-white'>Contact Us</li>
-            </Link>
-            <Link href="services" onClick={handleNav}>
-                <li className=' uppercase hover:border-b text-xl text-white'>Services</li>
-            </Link>
+                <Link href="/" onClick={handleNav}>
+                    <li className=' uppercase hover:border-b text-xl text-white'>Home</li>
+                </Link>
+                <Link href="marketplace" onClick={handleNav}>
+                    <li className=' uppercase hover:border-b text-xl text-white'>Market</li>
+                </Link>
+                <Link href="contact-us" onClick={handleNav}>
+                    <li className=' uppercase hover:border-b text-xl text-white'>Contact Us</li>
+                </Link>
+                <Link href="services" onClick={handleNav}>
+                    <li className=' uppercase hover:border-b text-xl text-white'>Services</li>
+                </Link>
             </ul>
         </div>
     </nav>

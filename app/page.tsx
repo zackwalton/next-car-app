@@ -38,7 +38,7 @@ export default function Home() {
         </h1>
       </div>
       
-      <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"}  >
+      <div className={"flex flex-col m-1 mb-10 overflow-hidden justify-center items-center"}  >
           {cars.map((car, index) => {
                 return <CarCard car={car} key={car.name}/>
           })}
