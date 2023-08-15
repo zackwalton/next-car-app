@@ -1,4 +1,4 @@
-//import cars from '../data.json';
+import cars from '../data.json';
 import Image from 'next/image';
 
 interface Props {
@@ -7,29 +7,6 @@ interface Props {
   };
 }
 
-const cars = [
-  {
-    id: 1,
-    name: "Porche 911 turbo",
-    price: 30000,
-    inventory: 1,
-    image: "/data/911.png"
-  },
-  {
-    id: 2,
-    name: "Lamborghini Gallardo",
-    price: 110000,
-    inventory: 1,
-    image: "/data/gallardo.png"
-  },
-  {
-    id: 3,
-    name: "Nissan Skyline",
-    price: 150000,
-    inventory: 1,
-    image: "/data/Skyline.png"
-  }
-]
 
 
 export default function CarPage({ params }: Props) {
