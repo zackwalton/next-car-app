@@ -8,8 +8,8 @@ import Logo_IG from '../public/Logo_IG.png';
 
 const Footer = () => {
   return (
-    <div className='text-xl'>
-       <nav className="fixed w-full h-24 shadow-xl bg-white">
+    <div className='text-xl text-white'>
+       <nav className="fixed w-full h-24 shadow-xl bg-zinc-800">
         <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
             <div>
                 Copyright claim goes here
