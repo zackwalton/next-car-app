@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import Link from 'next/link'
 import './globals.css'
@@ -6,18 +7,21 @@ import CarCard from './CarCard'
 
 const cars = [
   {
+    id: 1,
     name: "Porche 911 turbo" ,
     price: 30000,
     inventory: 1,
     image: "/data/911.png"
   },
   {
+    id:2,
     name: "Laborghini Gallardo" ,
     price: 110000,
     inventory: 1,
     image: "/data/gallardo.png"
   },
   {
+    id:3,
     name: "Nissan Skyline" ,
     price: 150000,
     inventory: 1,
@@ -26,8 +30,6 @@ const cars = [
 ]
 
 export default function Home() {
-
-  
 
   return (
     <main>
@@ -39,9 +41,14 @@ export default function Home() {
       </div>
       
       <div className={"flex flex-col m-1 mb-10 overflow-hidden justify-center items-center"}  >
+          
           {cars.map((car, index) => {
-                return <CarCard car={car} key={car.name}/>
-          })}
+            return (
+              <li key={car.id}>
+                <Link href={`/cars/${car.id}`} ><CarCard car={car} key={car.name}/></Link>
+              </li>
+            )
+        })}
       </div>
       
       </div>
