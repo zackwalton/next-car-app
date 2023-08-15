@@ -47,9 +47,8 @@ export default function CarPage({ params }: Props) {
 
   return (
     <main>
-      <div className={"flex m-1 mb-10 overflow-hidden justify-center items-center"}  >
+      <div className={"flex bg-[url('/bg.jpg')] overflow-hidden justify-center items-center"}  >
       < Image className={"border border-gray-300 rounded-lg"} src={myCar.image} alt={"None"} height={500} width={500}/> 
-      
     </div>
     </main>
   )
