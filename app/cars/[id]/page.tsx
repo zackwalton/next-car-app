@@ -1,5 +1,6 @@
 import cars from '../data.json';
 import Image from 'next/image';
+import ImageCarousel from '../ImageCarousel';
 
 interface Props {
   params: {
@@ -25,8 +26,9 @@ export default function CarPage({ params }: Props) {
   return (
     <main>
       <div className={"flex bg-[url('/bg.jpg')] overflow-hidden justify-center items-center"}  >
-        <div className='flex flex-col space-y-2'>
-          < Image className={"border border-gray-300 rounded-lg"} src={myCar.image} alt={"None"} height={500} width={500}/> 
+        
+        <div className='flex flex-col space-y-2 py-10'>
+          <ImageCarousel /> 
           <p className='text-white text-4xl'>{myCar.name}</p>
           <p className='text-white text-4xl'>${myCar.price}</p>
           <p className='text-white text-4xl'>{myCar.Kilometers} km</p>
@@ -44,3 +46,5 @@ export default function CarPage({ params }: Props) {
     </main>
   )
   }
+
+  
