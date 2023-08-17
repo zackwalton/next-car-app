@@ -1,10 +1,10 @@
 import cars from '../data.json';
-import Image from 'next/image';
 import ImageCarousel from '../ImageCarousel';
+import slugify from "slugify";
 
 interface Props {
   params: {
-    id: number;
+    slug: string;
   };
 }
 
@@ -12,8 +12,8 @@ interface Props {
 
 export default function CarPage({ params }: Props) {
  
-  const myCar = cars.find(car => car.id == params.id);
-  console.log(params.id)
+  const myCar = cars.find(car => slugify(car.name).toLowerCase() == params.slug);
+  console.log(params.slug)
 
   if (!myCar) {
     return (
