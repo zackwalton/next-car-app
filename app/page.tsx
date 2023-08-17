@@ -1,8 +1,4 @@
-
-import Image from 'next/image'
-import Link from 'next/link'
 import './globals.css'
-import { Inventory } from '@mui/icons-material'
 import CarCard from './CarCard'
 
 const cars = [
@@ -34,23 +30,18 @@ export default function Home() {
   return (
     <main>
       <div className="bg-[url('/bg.jpg')]">
-      <div className={"flex mb-10 overflow-hidden justify-center items-center"}>
-        <h1 className="text-3xl text-green-500 pt-4">
-          Deals of the day
-        </h1>
-      </div>
-      
+        <div className={"flex mb-10 overflow-hidden justify-center items-center"}>
+          <h1 className="text-3xl text-green-500 pt-4">Deals of the day</h1>
+        </div>
+
       <div className={"flex flex-col m-1 mb-10 overflow-hidden justify-center items-center"}  >
-          
           {cars.map((car, index) => {
             return (
-              <li key={car.id}>
-                <Link href={`/cars/${car.id}`} ><CarCard car={car} key={car.name}/></Link>
-              </li>
+              <CarCard car={car} key={index}/>
             )
         })}
       </div>
-      
+
       </div>
       {/* <div className="flex overflow-x-auto px-10 py-10">
         <div className="flex-none">
@@ -69,9 +60,9 @@ export default function Home() {
           <img className="h-48 w-96 object-cover" src="/car-temp2.png" />
         </div>
         </div>*/}
-      
 
-      
+
+
     </main>
   )
 }
