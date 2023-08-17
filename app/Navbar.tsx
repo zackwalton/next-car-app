@@ -36,7 +36,7 @@ const Navbar = () => {
                     <Link href="/">
                         <li className='ml-10 uppercase hover:border-b text-xl text-white'>Home</li>
                     </Link>
-                    <Link href="marketplace">
+                    <Link href="/marketplace">
                         <li className='ml-10 uppercase hover:border-b text-xl text-white'>Market</li>
                     </Link>
                     <Link href="contact-us">
