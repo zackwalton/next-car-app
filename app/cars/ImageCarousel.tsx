@@ -38,27 +38,30 @@ export default function ImageCarousel() {
       className="absolute left-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
     />
     <div className="w-full h-[50vh] flex overflow-hidden relative m-auto">
-      <Swipe
-        onSwipeLeft={handleNextSlide}
-        onSwipeRight={handlePrevSlide}
-        className="relative z-10 w-full h-full"
-      >
-        {images.map((img, index) => {
-          if (index === currentSlide) {
-            return (
-              <Image
-                key={img}
-                src={img}
-                alt={"None"}
-                layout="fill"
-                objectFit="contain"
-                className="animate-fadeIn"
-              />
-            );
-          }
-        })}
-      </Swipe>
-    </div>
+  <Swipe
+    onSwipeLeft={handleNextSlide}
+    onSwipeRight={handlePrevSlide}
+    className="relative z-10 w-full h-full"
+  >
+    {images.map((img, index) => {
+      if (index === currentSlide) {
+        return (
+          <div
+            key={img}
+            className="aspect-w-16 aspect-h-9 animate-fadeIn"
+          >
+            <Image
+              src={img}
+              alt={"None"}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        );
+      }
+    })}
+  </Swipe>
+</div>
     <AiOutlineRight
       onClick={handleNextSlide}
       className="absolute right-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"

@@ -31,7 +31,7 @@ const Footer = () => {
                             alt="Logo"
                             width="35"
                             height="50"
-                            className="cursor-pointer"
+                            className="cursor-pointer "
                             priority
                         />
                     </Link>

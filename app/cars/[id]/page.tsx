@@ -25,24 +25,48 @@ export default function CarPage({ params }: Props) {
 
   return (
     <main>
-      <div className={"flex bg-[url('/bg.jpg')] overflow-hidden justify-center items-center"}  >
+      <div className="bg-[url('/bg.jpg')] px-4 py-8 md:px-8">
+    <div className="md:flex md:flex-col md:space-y-4">
+  
+        <div className="md:hidden">
+            <ImageCarousel />
+            <p className="text-white text-4xl font-bold py-2" >Nissan GT-R</p>
+            <p className="text-white text-4xl font-semibold py-2">$85,000</p>
+            <p className="text-white text-4xl py-2">30,000 km</p>
+            <p className="text-white text-4xl py-2">Inventory: 10</p>
+            <p className="text-white text-4xl py-5">Description:</p>
+            <p className="text-white text-lg">Specs: High-performance sports car</p>
+            <p className="text-white text-lg">Accidents: None</p>
+            <p className="text-white text-lg">Maintenance: Regularly serviced</p>
+            <p className="text-white text-lg">Mods: Upgraded exhaust system</p>
+            <p className="text-white text-lg">Condition: Excellent</p>
+            <p className="text-white text-lg">Sale Type: New</p>
+            <p className="text-white text-lg">Delivery Type: Pickup / Shipping</p>
+        </div>
         
-        <div className='flex flex-col space-y-2 py-10'>
-          <ImageCarousel /> 
-          <p className='text-white text-4xl'>{myCar.name}</p>
-          <p className='text-white text-4xl'>${myCar.price}</p>
-          <p className='text-white text-4xl'>{myCar.Kilometers} km</p>
-          <p className='text-white text-4xl'>Inventory  {myCar.inventory}</p>
-          <p className='text-white text-xl'>{myCar.specs}</p>
-          <p className='text-white text-xl'>{myCar.Accidents}</p>
-          <p className='text-white text-xl'>{myCar.Maintenance}</p>
-          <p className='text-white text-xl'>{myCar.Mods}</p>
-          <p className='text-white text-xl'>{myCar.Condition}</p>
-          <p className='text-white text-xl'>{myCar.SaleType}</p>
-          <p className='text-white text-xl'>{myCar.DeliveryType}</p>
-
+      
+        <div className="hidden md:flex md:space-x-4">
+            <div className="md:w-1/2">
+                <ImageCarousel />
+            </div>
+            <div className="md:w-1/2">
+                <p className="text-white text-4xl font-bold py-2" >Nissan GT-R</p>
+                <p className="text-white text-4xl font-semibold py-2">$85,000</p>
+                <p className="text-white text-4xl py-2">30,000 km</p>
+                <p className="text-white text-4xl py-2">Inventory: 10</p>
+                <p className="text-white text-4xl py-5">Description:</p>
+                <p className="text-white text-lg">Specs: High-performance sports car</p>
+                <p className="text-white text-lg">Accidents: None</p>
+                <p className="text-white text-lg">Maintenance: Regularly serviced</p>
+                <p className="text-white text-lg">Mods: Upgraded exhaust system</p>
+                <p className="text-white text-lg">Condition: Excellent</p>
+                <p className="text-white text-lg">Sale Type: New</p>
+                <p className="text-white text-lg">Delivery Type: Pickup / Shipping</p>
+            </div>
         </div>
     </div>
+</div>
+
     </main>
   )
   }
