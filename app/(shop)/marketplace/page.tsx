@@ -133,7 +133,6 @@ const carBrands = [
   "McLaren",
   "Cadillac",
   "Lincoln",
-  "Bentley",
   "Maybach"
 ];
 const carImages = [
