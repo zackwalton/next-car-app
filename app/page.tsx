@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main>
       <div className="bg-[url('/bg.jpg')]">
-        <div className={"flex mb-10 overflow-hidden justify-center items-center"}>
+        <div className={"flex overflow-hidden justify-center items-center"}>
           <h1 className="text-3xl text-green-500 pt-4">Deals of the day</h1>
         </div>
 

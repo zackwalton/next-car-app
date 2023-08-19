@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+<div className="bg-[url('/bg.jpg')] min-h-screen flex items-center justify-center">
   <form className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
     <h1 className="text-2xl font-semibold mb-4">Get in touch</h1>
     <div className="mb-4">
@@ -30,7 +30,7 @@ export default function Home() {
     <div className="mb-4">
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label for="frm-first" className="block text-gray-700">First Name</label>
+          <label htmlFor="frm-first" className="block text-gray-700">First Name</label>
           <input
             id="frm-first"
             type="text"
