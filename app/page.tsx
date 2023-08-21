@@ -1,5 +1,6 @@
 import './globals.css'
 import CarCard from './CarCard'
+import Image from 'next/image'
 
 const cars = [
   {
@@ -30,7 +31,7 @@ export default function Home() {
   return (
     <main>
       <div className="bg-[url('/bg.jpg')]">
-        <div className={"flex overflow-hidden justify-center items-center"}>
+        {/* <div className={"flex overflow-hidden justify-center items-center"}>
           <h1 className="text-3xl text-green-500 pt-4">Deals of the day</h1>
         </div>
 
@@ -40,29 +41,20 @@ export default function Home() {
               <CarCard car={car} key={index}/>
             )
         })}
+      </div> */}
+      <div className="flex overflow-hidden justify-center items-center p-4">
+        <Image className={""} src="/carthing.png" alt={"None"} height={500} width={500}/>
       </div>
 
+      
+
+      
       </div>
-      {/* <div className="flex overflow-x-auto px-10 py-10">
-        <div className="flex-none">
-          <img className="h-48 w-96 object-cover" src="/car-temp1.png" />
-        </div>
-        <div className="flex-none">
-          <img className="h-48 w-96 object-cover" src="/car-temp2.png" />
-        </div>
-        <div className="flex-none">
-          <img className="h-48 w-96 object-cover" src="/car-temp3.jpeg" />
-        </div>
-        <div className="flex-none">
-          <img className="h-48 w-96 object-cover" src="/car-temp1.png" />
-        </div>
-        <div className="flex-none">
-          <img className="h-48 w-96 object-cover" src="/car-temp2.png" />
-        </div>
-        </div>*/}
 
 
 
     </main>
   )
 }
+
+
