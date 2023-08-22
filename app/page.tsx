@@ -1,60 +1,57 @@
-import './globals.css'
-import CarCard from './CarCard'
-import Image from 'next/image'
-
-const cars = [
-  {
-    id: 1,
-    name: "Porche 911 turbo" ,
-    price: 30000,
-    inventory: 1,
-    image: "/data/911.png"
-  },
-  {
-    id:2,
-    name: "Laborghini Gallardo" ,
-    price: 110000,
-    inventory: 1,
-    image: "/data/gallardo.png"
-  },
-  {
-    id:3,
-    name: "Nissan Skyline" ,
-    price: 150000,
-    inventory: 1,
-    image: "/data/Skyline.png"
-  }
-]
+"use client"
+import React, { useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
+  const [button1Clicked, setButton1Clicked] = useState(false);
+  const [button2Clicked, setButton2Clicked] = useState(false);
+  const [button3Clicked, setButton3Clicked] = useState(false);
+
+  const handleButtonClick = (buttonNumber:number) => {
+    switch (buttonNumber) {
+      case 1:
+        setButton1Clicked(true);
+        break;
+      case 2:
+        setButton2Clicked(true);
+        break;
+      case 3:
+        setButton3Clicked(true);
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <main>
-      <div className="bg-[url('/bg.jpg')]">
-        {/* <div className={"flex overflow-hidden justify-center items-center"}>
-          <h1 className="text-3xl text-green-500 pt-4">Deals of the day</h1>
-        </div>
+  <div className="bg-[url('/bg.jpg')] flex justify-center items-center ">
+    <div
+      className="relative"
+      style={{ width: '500px', height: '500px' }}
+    >
+      <Image src="/carthing.png" alt="None" layout="fill" />
+      <button
+        className={`absolute left-1/4 bottom-12 text-white py-1 transition-colors duration-300 w-20 h-1/6 rounded`}
+        onClick={() => handleButtonClick(1)}
+      >
+        
+      </button>
+      <button
+        className={`absolute left-1/2 transform -translate-x-1/2 bottom-12 text-white py-1 transition-colors duration-300 w-20 h-1/6 rounded`}
+        onClick={() => handleButtonClick(2)}
+      >
+        
+      </button>
+      <button
+        className={`absolute right-1/4 bottom-2 text-white py-1 transition-colors duration-300 w-20 h-1/4 rounded`}
+        onClick={() => handleButtonClick(3)}
+      >
+        
+      </button>
+    </div>
+  </div>
+</main>
 
-      <div className={"flex flex-col m-1 mb-10 overflow-hidden justify-center items-center"}  >
-          {cars.map((car, index) => {
-            return (
-              <CarCard car={car} key={index}/>
-            )
-        })}
-      </div> */}
-      <div className="flex overflow-hidden justify-center items-center p-4">
-        <Image className={""} src="/carthing.png" alt={"None"} height={500} width={500}/>
-      </div>
-
-      
-
-      
-      </div>
-
-
-
-    </main>
-  )
+  );
 }
-
-

@@ -25,3 +25,14 @@ export default function CarCard({car}: Props) {
     </div>
   )
 }
+{/* <div className={"flex overflow-hidden justify-center items-center"}>
+          <h1 className="text-3xl text-green-500 pt-4">Deals of the day</h1>
+        </div>
+
+      <div className={"flex flex-col m-1 mb-10 overflow-hidden justify-center items-center"}  >
+          {cars.map((car, index) => {
+            return (
+              <CarCard car={car} key={index}/>
+            )
+        })}
+      </div> */}
