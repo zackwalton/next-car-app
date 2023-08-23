@@ -5,6 +5,7 @@ import slugify from "slugify";
 
 interface Props {
   car: {
+    id:number,
     name: string,
     price: number,
     inventory: number,

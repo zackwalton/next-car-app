@@ -4,47 +4,20 @@
       "name": "Porche 911 turbo",
       "price": 30000,
       "inventory": 1,
-      "image": "/data/911.png",
-      "specs": "Some shit about specs",
-      "Kilometers": 10000,
-      "Year": 2000,
-      "Accidents": "No accidents",
-      "Maintenance": "Up to date",
-      "Mods": "Turbo",
-      "Condition": "Good",
-      "SaleType": "Private sale",
-      "DeliveryType": "door to door"
+      "image": "/data/911.png"
     },
     {
       "id": 2,
       "name": "Lamborghini Gallardo",
       "price": 110000,
       "inventory": 1,
-      "image": "/data/gallardo.png",
-      "specs": "Some shit about specs",
-      "Kilometers": 10000,
-      "Year": 2000,
-      "Accidents": "No accidents",
-      "Maintenance": "Up to date",
-      "Mods": "Turbo",
-      "Condition": "Good",
-      "SaleType": "Private sale",
-      "DeliveryType": "door to door"
+      "image": "/data/gallardo.png"
     },
     {
       "id": 3,
       "name": "Nissan Skyline",
       "price": 150000,
       "inventory": 1,
-      "image": "/data/Skyline.png",
-      "specs": "Some shit about specs",
-      "Kilometers": 10000,
-      "Year": 2000,
-      "Accidents": "No accidents",
-      "Maintenance": "Up to date",
-      "Mods": "Turbo",
-      "Condition": "Good",
-      "SaleType": "Private sale",
-      "DeliveryType": "door to door"
+      "image": "/data/Skyline.png"
     }
 ]
